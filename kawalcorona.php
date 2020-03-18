@@ -30,15 +30,7 @@ class kawalcoronaApi
 	public function __construct($option = [])
 	{
 
-		if (isset($option['region'])) {
-			$this->params = strtolower($option['region']);
-		} elseif (isset($option['option'])) {
-			$this->params = $option['option'];
-		} else {
-			$this->params = "";
-		}
-
-		return $this->params;
+		return $this->setOption($option);
 	}
 
 	/**

@@ -1,25 +1,7 @@
 ## Library Kawalcorona.com
 Author Muhammad Zakir Ramadhan
 ---
-Option 
-*sembuh
-*meninggal
-*positif
-
----
-####Example.php
-``<?php
-``use zakirkun\kawalcorona\kawalcoronaApi;
-``require 'Kawalcorona.php';
-``
-``$get = new kawalcoronaApi();
-``
-``// option
-// sembuh|meninggal|positif
-``$option = array(
-``	'option'	=> 'sembuh'
-``);
-``$get->setOption($option);
-``
-``var_dump($get->result());
-``?>
+Option :
+1. sembuh
+2. meninggal
+2. positif

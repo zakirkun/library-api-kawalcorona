@@ -1,10 +1,25 @@
 ## Library Kawalcorona.com
----
 Author Muhammad Zakir Ramadhan
 ---
-option Available :
-- option : 
- - sembuh
- - meninggal
- - positif
-- region 
+Option 
+*sembuh
+*meninggal
+*positif
+
+---
+####Example.php
+``<?php
+``use zakirkun\kawalcorona\kawalcoronaApi;
+``require 'Kawalcorona.php';
+``
+``$get = new kawalcoronaApi();
+``
+``// option
+// sembuh|meninggal|positif
+``$option = array(
+``	'option'	=> 'sembuh'
+``);
+``$get->setOption($option);
+``
+``var_dump($get->result());
+``?>

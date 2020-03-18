@@ -25,9 +25,9 @@ class kawalcoronaApi
 	/**
 	* @param $option array
 	*
-	* @return null
+	* @return string
 	*/
-	public function __construct($option)
+	public function __construct($option = [])
 	{
 
 		if (isset($option['region'])) {
@@ -37,6 +37,34 @@ class kawalcoronaApi
 		} else {
 			$this->params = "";
 		}
+
+		return $this->params;
+	}
+
+	/**
+	* @param $option array
+	*
+	* @return string
+	*/
+	public function setOption($option = [])
+	{
+		if (isset($option['region'])) {
+			$this->params = strtolower($option['region']);
+		} elseif (isset($option['option'])) {
+			$this->params = $option['option'];
+		} else {
+			$this->params = "";
+		}
+	}
+
+	/**
+	* @param $region string
+	*
+	* @return string
+	*/
+	public function setRegion($region)
+	{
+		return $this->params = $region;
 	}
 
 	/**
@@ -68,6 +96,7 @@ class kawalcoronaApi
 
 		return $this->json($this->result);
 	}
+
 
 	/**
 	* Parsing data dari class::getData 

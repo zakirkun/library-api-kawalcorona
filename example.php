@@ -11,4 +11,7 @@ $option = array(
 );
 $get->setOption($option);
 
+// region
+$get->setRegion('indonesia');
+
 var_dump($get->result());

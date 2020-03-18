@@ -78,7 +78,7 @@ class kawalcoronaApi
 	}
 
 	/**
-	* Menampilkan Outpu Data Dari class::_parsing
+	* Menampilkan Output Data Dari class::_parsing
 	*
 	* @return array
 	*/

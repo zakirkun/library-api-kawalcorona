@@ -57,7 +57,7 @@ class kawalcoronaApi
 	public function result()
 	{
 		if (empty($this->getData())) {
-			echo $this->json(['success' => false, 'message' => 'data kosong']);
+			return $this->json(['success' => false, 'message' => 'data kosong']);
 			die;
 		}
 
@@ -66,7 +66,7 @@ class kawalcoronaApi
 			'data'	=> $this->_parsing()
 		);
 
-		echo $this->json($this->result);
+		return $this->json($this->result);
 	}
 
 	/**
